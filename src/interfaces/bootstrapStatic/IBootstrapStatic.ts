@@ -8,11 +8,11 @@ import { ITeam } from './ITeam';
 
 export interface IBootstrapStatic {
     events: IEvent[];
-    game_settings: IGameSettings;
+    gameSettings: IGameSettings;
     phases: IPhase[];
     teams: ITeam[];
-    total_players: number;
+    totalPlayers: number;
     elements: IElement[];
-    element_stats: IElementStat[];
-    element_types: IElementType[];
+    elementStats: IElementStat[];
+    elementTypes: IElementType[];
 }

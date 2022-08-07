@@ -1,31 +1,31 @@
 export interface IEvent {
     id: number;
     name: string
-    deadline_time: string;
-    average_entry_score: number;
+    deadlineTime: string;
+    averageEntryScore: number;
     finished: boolean;
-    data_checked: boolean;
-    highest_scoring_entry: number;
-    deadline_time_epoch: number;
-    deadline_time_game_offset: number;
-    highest_score: number;
-    is_previous: boolean;
-    is_current: boolean;
-    is_next: boolean;
-    cup_leagues_created: boolean;
-    h2h_ko_matches_created: boolean;
-    chip_plays: {
-        chip_name: string;
-        num_played: number
+    dataChecked: boolean;
+    highestScoringEntry: number;
+    deadlineTimeEpoch: number;
+    deadlineTimeGameOffset: number;
+    highestScore: number;
+    isPrevious: boolean;
+    isCurrent: boolean;
+    isNext: boolean;
+    cupLeaguesCreated: boolean;
+    h2hKoMatchesCreated: boolean;
+    chipPlays: {
+        chipName: string;
+        numPlayed: number
     }[];
-    most_selected: number;
-    most_transferred_in: number;
-    top_element: number;
-    top_element_info: {
+    mostSelected: number;
+    mostTransferredIn: number;
+    topElement: number;
+    topElementInfo: {
         id: number;
         points: number
     };
-    transfers_made: number;
-    most_captained: number;
-    most_vice_captained: number
+    transfersMade: number;
+    mostCaptained: number;
+    mostViceCaptained: number
 }
