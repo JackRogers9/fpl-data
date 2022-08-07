@@ -1,33 +1,7 @@
 import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
-import { ApolloServer, gql } from 'apollo-server';
-
-const typeDefs = gql`
-  type Book {
-    title: String
-    author: String
-  }
-
-  type Query {
-    books: [Book]
-  }
-`;
-
-const resolvers = {
-    Query: {
-        books: () => books,
-    },
-};
-
-const books = [
-    {
-        title: 'The Awakening',
-        author: 'Kate Chopin',
-    },
-    {
-        title: 'City of Glass',
-        author: 'Paul Auster',
-    },
-];
+import { resolvers } from './resolvers/resolvers';
+import { ApolloServer } from 'apollo-server';
+import { typeDefs } from './schema/typeDefs';
 
 const server = new ApolloServer({
     typeDefs,
