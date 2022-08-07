@@ -1,6 +1,6 @@
 export interface IEvent {
     id: number;
-    name: string
+    name: string;
     deadlineTime: string;
     averageEntryScore: number;
     finished: boolean;
@@ -16,16 +16,16 @@ export interface IEvent {
     h2hKoMatchesCreated: boolean;
     chipPlays: {
         chipName: string;
-        numPlayed: number
+        numPlayed: number;
     }[];
     mostSelected: number;
     mostTransferredIn: number;
     topElement: number;
     topElementInfo: {
         id: number;
-        points: number
+        points: number;
     };
     transfersMade: number;
     mostCaptained: number;
-    mostViceCaptained: number
+    mostViceCaptained: number;
 }
