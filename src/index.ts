@@ -1,4 +1,4 @@
-import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
+import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
 import { ApolloServer, gql } from 'apollo-server';
 
 const typeDefs = gql`
@@ -35,7 +35,7 @@ const server = new ApolloServer({
     csrfPrevention: true,
     cache: 'bounded',
     plugins: [
-        ApolloServerPluginLandingPageLocalDefault({ embed: true }),
+        ApolloServerPluginLandingPageGraphQLPlayground(),
     ],
 });
 
