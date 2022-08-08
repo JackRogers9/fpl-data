@@ -1,0 +1,73 @@
+import { gql } from 'apollo-server';
+
+export const ElementSchema = gql`
+    type Element {
+        chanceOfPlayingNextRound: String
+        chanceOfPlayingThisRound: String
+        code: Int
+        costChangeEvent: Int
+        costChangeEventFall: Int
+        costChangeStart: Int
+        costChangeStartFall: Int
+        dreamteamCount: Int
+        elementType: Int
+        epNext: String
+        epThis: String
+        eventPoints: Int
+        firstName: String
+        form: String
+        id: Int
+        inDreamteam: Boolean
+        news: String
+        newsAdded: String
+        nowCost: Int
+        photo: String
+        pointsPerGame: String
+        secondName: String
+        selectedByPercent: String
+        special: Boolean
+        squadInt: Int
+        status: String
+        team: Int
+        teamCode: Int
+        totalPoints: Int
+        transfersIn: Int
+        transfersInEvent: Int
+        transfersOut: Int
+        transfersOutEvent: Int
+        valueForm: String
+        valueSeason: String
+        webName: String
+        minutes: Int
+        goalsScored: Int
+        assists: Int
+        cleanSheets: Int
+        goalsConceded: Int
+        ownGoals: Int
+        penaltiesSaved: Int
+        penaltiesMissed: Int
+        yellowCards: Int
+        redCards: Int
+        saves: Int
+        bonus: Int
+        bps: Int
+        influence: String
+        creativity: String
+        threat: String
+        ictIndex: String
+        influenceRank: Int
+        influenceRankType: Int
+        creativityRank: Int
+        creativityRankType: Int
+        threatRank: Int
+        threatRankType: Int
+        ictIndexRank: Int
+        ictIndexRankType: Int
+        cornersAndIndirectFreekicksOrder: Int
+        cornersAndIndirectFreekicksText: String
+        directFreekicksOrder: Int
+        directFreekicksText: String
+        penaltiesOrder: String
+        penaltiesText: String
+    }
+`;
