@@ -1,6 +1,6 @@
 import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
-import { resolvers } from './resolvers/resolvers';
 import { ApolloServer } from 'apollo-server';
+import { resolvers } from './resolvers/resolvers';
 import { typeDefs } from './schema/typeDefs';
 
 const server = new ApolloServer({
@@ -10,7 +10,7 @@ const server = new ApolloServer({
     cache: 'bounded',
     plugins: [
         ApolloServerPluginLandingPageGraphQLPlayground(),
-    ],
+    ]
 });
 
 server.listen(9000).then(({ url }) => {
