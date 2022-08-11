@@ -21,7 +21,7 @@ const GeneralSchema = gql`
     }
 `;
 
-export const BootstrapStaticSchema = [
+export const BootstrapStaticSchemas = [
     GeneralSchema,
     GameSettingsSchema,
     EventSchema,
