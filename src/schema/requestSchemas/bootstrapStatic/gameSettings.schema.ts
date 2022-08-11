@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server';
 
-export const GameSettingsSchema = gql`
+export const gameSettingsSchema = gql`
     type GameSettings {
         leagueJoinPrivateMax: Int
         leagueJoinPublicMax: Int

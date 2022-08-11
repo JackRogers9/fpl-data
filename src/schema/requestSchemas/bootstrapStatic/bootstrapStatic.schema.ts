@@ -1,14 +1,16 @@
 import { gql } from 'apollo-server';
 
-import { ChipPlaySchema, EventSchema, TopElementInfoSchema } from './event.schema';
-import { GameSettingsSchema } from './gameSettings.schema';
-import { ElementStatSchema } from './elementStat.schema';
-import { ElementTypeSchema } from './elementType.schema';
-import { ElementSchema } from './element.schema';
-import { PhaseSchema } from './phase.schema';
-import { TeamSchema } from './team.schema';
+import { topElementInfoSchema } from './topElementInfo.schema';
+import { gameSettingsSchema } from './gameSettings.schema';
+import { elementStatSchema } from './elementStat.schema';
+import { elementTypeSchema } from './elementType.schema';
+import { chipPlaySchema } from './chipPlay.schema';
+import { elementSchema } from './element.schema';
+import { phaseSchema } from './phase.schema';
+import { eventSchema } from './event.schema';
+import { teamSchema } from './team.schema';
 
-const GeneralSchema = gql`
+const generalSchema = gql`
     type General {
         events: [Event]
         gameSettings: GameSettings
@@ -22,14 +24,14 @@ const GeneralSchema = gql`
 `;
 
 export const BootstrapStaticSchemas = [
-    GeneralSchema,
-    GameSettingsSchema,
-    EventSchema,
-    ChipPlaySchema,
-    TopElementInfoSchema,
-    PhaseSchema,
-    TeamSchema,
-    ElementSchema,
-    ElementStatSchema,
-    ElementTypeSchema
+    generalSchema,
+    gameSettingsSchema,
+    eventSchema,
+    chipPlaySchema,
+    topElementInfoSchema,
+    phaseSchema,
+    teamSchema,
+    elementSchema,
+    elementStatSchema,
+    elementTypeSchema
 ];

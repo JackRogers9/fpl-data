@@ -1,8 +1,8 @@
 import { gql } from 'apollo-server';
-import { StatSchema } from './stat.schema';
-import { DataSchema } from './data.schema';
+import { statSchema } from './stat.schema';
+import { dataSchema } from './data.schema';
 
-const FixtureSchema = gql`
+const fixtureSchema = gql`
     type Fixture {
         code: Int
         event: Int
@@ -25,7 +25,7 @@ const FixtureSchema = gql`
 `;
 
 export const FixturesSchemas = [
-    FixtureSchema,
-    StatSchema,
-    DataSchema
+    fixtureSchema,
+    statSchema,
+    dataSchema
 ];

@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server';
 
-export const StatSchema = gql`
+export const statSchema = gql`
     type Stat {
         identifier: String
         a: [Data]

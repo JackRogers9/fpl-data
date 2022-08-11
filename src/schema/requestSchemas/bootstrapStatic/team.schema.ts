@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server';
 
-export const TeamSchema = gql`
+export const teamSchema = gql`
     type Team {
         code: Int
         draw: Int

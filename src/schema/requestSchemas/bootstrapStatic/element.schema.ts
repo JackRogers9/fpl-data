@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server';
 
-export const ElementSchema = gql`
+export const elementSchema = gql`
     type Element {
         chanceOfPlayingNextRound: String
         chanceOfPlayingThisRound: String

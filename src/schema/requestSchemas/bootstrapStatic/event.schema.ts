@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server';
 
-export const EventSchema = gql`
+export const eventSchema = gql`
     type Event {
         id: Int
         name: String
@@ -25,19 +25,5 @@ export const EventSchema = gql`
         transfersMade: Int
         mostCaptained: Int
         mostViceCaptained: Int
-    }
-`;
-
-export const ChipPlaySchema = gql`
-    type ChipPlay {
-        chipName: String
-        numPlayed: Int
-    }
-`;
-
-export const TopElementInfoSchema = gql`
-    type TopElementInfo {
-        id: Int
-        points: Int
     }
 `;

@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server';
 
-export const PhaseSchema = gql`
+export const phaseSchema = gql`
     type Phase {
         id: Int
         name: String

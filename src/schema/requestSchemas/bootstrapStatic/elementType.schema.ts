@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server';
 
-export const ElementTypeSchema = gql`
+export const elementTypeSchema = gql`
     type ElementType {
         id: Int
         pluralName: String

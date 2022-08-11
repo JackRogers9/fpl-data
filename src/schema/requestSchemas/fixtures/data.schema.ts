@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server';
 
-export const DataSchema = gql`
+export const dataSchema = gql`
     type Data {
         value: Int
         element: Int
