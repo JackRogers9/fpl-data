@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server';
-import { BootstrapStaticSchemas } from './requestSchemas/bootstrapStatic/bootstrapStatic.schema';
-import { FixturesSchemas } from './requestSchemas/fixtures/fixture.schema';
+import { bootstrapStaticSchemas } from './requestSchemas/bootstrapStatic/bootstrapStatic.schema';
+import { fixturesSchemas } from './requestSchemas/fixtures/fixture.schema';
 
 const QuerySchema = gql`
     type Query {
@@ -11,6 +11,6 @@ const QuerySchema = gql`
 
 export const typeDefs = [
     QuerySchema,
-    ...BootstrapStaticSchemas,
-    ...FixturesSchemas
+    ...bootstrapStaticSchemas,
+    ...fixturesSchemas
 ];

@@ -24,7 +24,7 @@ const fixtureSchema = gql`
     }
 `;
 
-export const FixturesSchemas = [
+export const fixturesSchemas = [
     fixtureSchema,
     statSchema,
     dataSchema
