@@ -23,3 +23,7 @@ export const getBootstrapStaticData = (): Promise<IBootstrapStatic> => {
 export const getFixturesData = (): Promise<IFixture[]> => {
     return retrieveData.load(`${baseUrl}/fixtures/`);
 };
+
+export const getEventStatusData = (): Promise<IFixture[]> => {
+    return retrieveData.load(`${baseUrl}/event-status/`);
+};
