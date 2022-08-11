@@ -2,6 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 import { camelizeKeys } from 'humps';
 import DataLoader from 'dataloader';
 import { IBootstrapStatic } from '../interfaces/bootstrapStatic/IBootstrapStatic';
+import { IEventStatus } from '../interfaces/eventStatus/IEventStatus';
 import { IFixture } from '../interfaces/fixtures/IFixture';
 
 const baseUrl = 'https://fantasy.premierleague.com/api';
@@ -24,6 +25,6 @@ export const getFixturesData = (): Promise<IFixture[]> => {
     return retrieveData.load(`${baseUrl}/fixtures/`);
 };
 
-export const getEventStatusData = (): Promise<IFixture[]> => {
+export const getEventStatusData = (): Promise<IEventStatus[]> => {
     return retrieveData.load(`${baseUrl}/event-status/`);
 };
