@@ -5,9 +5,9 @@ import { fixturesSchemas } from './requestSchemas/fixtures/fixture.schema';
 
 const QuerySchema = gql`
     type Query {
-        General: General
-        Fixtures: [Fixture]
-        EventStatus: EventStatus
+        general: General
+        fixtures: [Fixture]
+        eventStatus: EventStatus
     }
 `;
 
