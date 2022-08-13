@@ -1,7 +1,7 @@
 export interface ITeam {
     code: number;
     draw: number;
-    form: null;
+    form: string;
     id: number;
     loss: number;
     name: string;
@@ -10,7 +10,7 @@ export interface ITeam {
     position: number;
     shortName: string;
     strength: number;
-    teamDivision: null;
+    teamDivision: string;
     unavailable: boolean;
     win: number;
     strengthOverallHome: number;

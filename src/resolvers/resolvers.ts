@@ -1,9 +1,25 @@
-import { getBootstrapStaticData, getEventStatusData, getFixturesData } from './requests';
+import { getPlayerGameweekData } from '../helpers/requestHelpers';
+import {
+    getBootstrapStaticData,
+    getEventStatusData,
+    getFixturesData,
+    getGameweekData
+} from './requests';
 
 export const resolvers = {
     Query: {
-        General: () => getBootstrapStaticData(),
-        Fixtures: () => getFixturesData(),
-        EventStatus: () => getEventStatusData()
+        general: () => getBootstrapStaticData(),
+        fixtures: () => getFixturesData(),
+        eventStatus: () => getEventStatusData(),
+
+        gameweekData: (
+            _: unknown,
+            args: {eventId: number}
+        ) => getGameweekData(args.eventId),
+
+        playerGameweekData: (
+            _: unknown,
+            args: {eventId: number, playerId: number}
+        ) => getPlayerGameweekData(args.eventId, args.playerId)
     }
 };

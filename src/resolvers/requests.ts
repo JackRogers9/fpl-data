@@ -2,6 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 import { camelizeKeys } from 'humps';
 import DataLoader from 'dataloader';
 import { IBootstrapStatic } from '../interfaces/bootstrapStatic/IBootstrapStatic';
+import { IGameweekStats } from '../interfaces/liveEvent/IGameweekStats';
 import { IEventStatus } from '../interfaces/eventStatus/IEventStatus';
 import { IFixture } from '../interfaces/fixtures/IFixture';
 
@@ -25,6 +26,10 @@ export const getFixturesData = (): Promise<IFixture[]> => {
     return retrieveData.load(`${baseUrl}/fixtures/`);
 };
 
-export const getEventStatusData = (): Promise<IEventStatus[]> => {
+export const getEventStatusData = (): Promise<IEventStatus> => {
     return retrieveData.load(`${baseUrl}/event-status/`);
+};
+
+export const getGameweekData = (eventId: number): Promise<IGameweekStats> => {
+    return retrieveData.load(`${baseUrl}/event/${eventId}/live/`);
 };
