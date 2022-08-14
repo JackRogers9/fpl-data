@@ -1,4 +1,4 @@
-export interface ICupData {
+export interface ICupInformation {
     matches: string[];
     status: {
         qualification_event: string;

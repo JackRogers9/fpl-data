@@ -3,7 +3,8 @@ import {
     getBootstrapStaticData,
     getEventStatusData,
     getFixturesData,
-    getGameweekData
+    getGameweekData,
+    getManagerData
 } from './requests';
 
 export const resolvers = {
@@ -20,6 +21,11 @@ export const resolvers = {
         playerGameweekData: (
             _: unknown,
             args: {eventId: number, playerId: number}
-        ) => getPlayerGameweekData(args.eventId, args.playerId)
+        ) => getPlayerGameweekData(args.eventId, args.playerId),
+
+        managerInformation: (
+            _: unknown,
+            args: {managerId: number}
+        ) => getManagerData(args.managerId)
     }
 };
