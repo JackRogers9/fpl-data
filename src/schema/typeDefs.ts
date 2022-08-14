@@ -1,4 +1,5 @@
 import { gql } from 'apollo-server';
+import { managerGameweekTeamSchemas } from './requestSchemas/managerGameweekTeam/managerGameweekTeam.schema';
 import { managerInformationSchemas } from './requestSchemas/managerInformation/managerInformation.schema';
 import { bootstrapStaticSchemas } from './requestSchemas/bootstrapStatic/bootstrapStatic.schema';
 import { managerHistorySchemas } from './requestSchemas/managerHistory/managerHistory.schema';
@@ -15,6 +16,7 @@ const querySchema = gql`
         playerGameweekData(eventId: Int, playerId: Int): PlayerGameweekData
         managerInformation(managerId: Int): ManagerInformation
         managerHistory(managerId: Int): ManagerHistory
+        managerGameweekTeam(managerId: Int, eventId: Int): ManagerGameweekTeam
     }
 `;
 
@@ -25,5 +27,6 @@ export const typeDefs = [
     ...eventStatusSchemas,
     ...gameweekDataSchemas,
     ...managerInformationSchemas,
-    ...managerHistorySchemas
+    ...managerHistorySchemas,
+    ...managerGameweekTeamSchemas
 ];

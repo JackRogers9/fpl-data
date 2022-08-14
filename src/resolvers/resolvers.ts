@@ -5,6 +5,7 @@ import {
     getFixturesData,
     getGameweekData,
     getManagerData,
+    getManagerGameweekTeam,
     getManagerHistoryData
 } from './requests';
 
@@ -32,6 +33,11 @@ export const resolvers = {
         managerHistory: (
             _: unknown,
             args: {managerId: number}
-        ) => getManagerHistoryData(args.managerId)
+        ) => getManagerHistoryData(args.managerId),
+
+        managerGameweekTeam: (
+            _: unknown,
+            args: {managerId: number, eventId: number}
+        ) => getManagerGameweekTeam(args.managerId, args.eventId)
     }
 };
