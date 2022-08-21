@@ -5,6 +5,7 @@ import { IManagerGameweekTeam } from '../interfaces/managerGameweekTeam/IManager
 import { IManagerInformation } from '../interfaces/managerInformation/IManagerInformation';
 import { IBootstrapStatic } from '../interfaces/bootstrapStatic/IBootstrapStatic';
 import { IManagerHistory } from '../interfaces/managerHistory/IManagerHistory';
+import { ISetPieceNotes } from '../interfaces/setPieceNotes/ISetPieceNotes';
 import { IGameweekStats } from '../interfaces/liveEvent/IGameweekStats';
 import { IEventStatus } from '../interfaces/eventStatus/IEventStatus';
 import { IFixture } from '../interfaces/fixtures/IFixture';
@@ -31,6 +32,10 @@ export const getFixturesData = (): Promise<IFixture[]> => {
 
 export const getEventStatusData = (): Promise<IEventStatus> => {
     return retrieveData.load(`${baseUrl}/event-status/`);
+};
+
+export const getSetPieceData = (): Promise<ISetPieceNotes> => {
+    return retrieveData.load(`${baseUrl}/team/set-piece-notes/`);
 };
 
 export const getGameweekData = (eventId: number): Promise<IGameweekStats> => {

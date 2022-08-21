@@ -6,7 +6,8 @@ import {
     getGameweekData,
     getManagerData,
     getManagerGameweekTeam,
-    getManagerHistoryData
+    getManagerHistoryData,
+    getSetPieceData
 } from './requests';
 
 export const resolvers = {
@@ -14,6 +15,7 @@ export const resolvers = {
         general: () => getBootstrapStaticData(),
         fixtures: () => getFixturesData(),
         eventStatus: () => getEventStatusData(),
+        setPieceNotes: () => getSetPieceData(),
 
         gameweekData: (
             _: unknown,
