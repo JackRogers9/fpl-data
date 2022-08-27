@@ -1,15 +1,18 @@
 import axios, { AxiosResponse } from 'axios';
 import { camelizeKeys } from 'humps';
 import DataLoader from 'dataloader';
-import { IManagerGameweekTeam } from '../interfaces/managerGameweekTeam/IManagerGameweekTeam';
-import { IManagerInformation } from '../interfaces/managerInformation/IManagerInformation';
-import { IBootstrapStatic } from '../interfaces/bootstrapStatic/IBootstrapStatic';
-import { IManagerHistory } from '../interfaces/managerHistory/IManagerHistory';
-import { ISetPieceNotes } from '../interfaces/setPieceNotes/ISetPieceNotes';
-import { IGameweekStats } from '../interfaces/liveEvent/IGameweekStats';
-import { IEventStatus } from '../interfaces/eventStatus/IEventStatus';
-import { IDreamTeam } from '../interfaces/dreamTeam/IDreamTeam';
-import { IFixture } from '../interfaces/fixtures/IFixture';
+
+import {
+    IManagerGameweekTeam,
+    IManagerInformation,
+    IBootstrapStatic,
+    IManagerHistory,
+    ISetPieceNotes,
+    IGameweekStats,
+    IEventStatus,
+    IDreamTeam,
+    IFixture,
+} from '../interfaces/src/interfaces';
 
 const baseUrl = 'https://fantasy.premierleague.com/api';
 

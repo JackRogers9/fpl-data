@@ -1,4 +1,4 @@
-import { IPlayerGameweekData } from '../interfaces/liveEvent/IPlayerGameweekData';
+import { IPlayerGameweekData } from '../interfaces/src/interfaces';
 import { getGameweekData } from '../resolvers/requests';
 
 export const getPlayerGameweekData = async (eventId: number, playerId: number):
