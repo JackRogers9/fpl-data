@@ -11,6 +11,6 @@ export const querySchema = gql`
         managerInformation(managerId: Int): ManagerInformation
         managerHistory(managerId: Int): ManagerHistory
         managerGameweekTeam(managerId: Int, eventId: Int): ManagerGameweekTeam
-        dreamTam(eventId: Int): DreamTeam
+        dreamTeam(eventId: Int): DreamTeam
     }
 `;
