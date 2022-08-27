@@ -17,17 +17,24 @@ $ git clone https://github.com/JackRogers9/fpl-data.git
 $ git clone git@github.com:JackRogers9/fpl-data.git
 ```
 
-2) Install dependencies.
+2) Initialize and update submodules.
+```bash
+$ git submodule init
+
+$ git submodule update
+```
+
+3) Install dependencies.
 ```bash
 $ npm install
 ```
 
-3) Run the server.
+4) Run the server.
 ```bash
 $ npm run server
 ```
 
-4) Navigate to [`http://localhost:9000/`](http://localhost:9000/).
+5) Navigate to [`http://localhost:9000/`](http://localhost:9000/).
 
 ---
 
