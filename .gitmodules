@@ -1,3 +1,0 @@
-[submodule "src/interfaces"]
-	path = src/interfaces
-	url = git@github.com:JackRogers9/fpl-data-interfaces.git
