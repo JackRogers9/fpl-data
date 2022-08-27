@@ -1,7 +1,8 @@
 # FPL Data
 
-This repository contains the resolvers and schemas for a GraphQL endpoint, which acts as a single source of data for
-the FPL endpoints.
+This repository contains the resolvers and schemas for a GraphQL endpoint which fetches data from the FPL API.
+
+The data from 10 of the FPL endpoints (listed below) can be queried from this GraphQL endpoint.
 
 ---
 
@@ -16,12 +17,12 @@ $ git clone https://github.com/JackRogers9/fpl-data.git
 $ git clone git@github.com:JackRogers9/fpl-data.git
 ```
 
-2) Install dependencies
+2) Install dependencies.
 ```bash
 $ npm install
 ```
 
-3) Run the server
+3) Run the server.
 ```bash
 $ npm run server
 ```
