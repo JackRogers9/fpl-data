@@ -1,6 +1,7 @@
 import { getPlayerGameweekData } from '../helpers/requestHelpers';
 import {
     getBootstrapStaticData,
+    getDreamTeamData,
     getEventStatusData,
     getFixturesData,
     getGameweekData,
@@ -40,6 +41,11 @@ export const resolvers = {
         managerGameweekTeam: (
             _: unknown,
             args: {managerId: number, eventId: number}
-        ) => getManagerGameweekTeam(args.managerId, args.eventId)
+        ) => getManagerGameweekTeam(args.managerId, args.eventId),
+
+        dreamTeam: (
+            _: unknown,
+            args: {eventId: number}
+        ) => getDreamTeamData(args.eventId)
     }
 };

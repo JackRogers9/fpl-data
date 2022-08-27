@@ -8,6 +8,7 @@ import { IManagerHistory } from '../interfaces/managerHistory/IManagerHistory';
 import { ISetPieceNotes } from '../interfaces/setPieceNotes/ISetPieceNotes';
 import { IGameweekStats } from '../interfaces/liveEvent/IGameweekStats';
 import { IEventStatus } from '../interfaces/eventStatus/IEventStatus';
+import { IDreamTeam } from '../interfaces/dreamTeam/IDreamTeam';
 import { IFixture } from '../interfaces/fixtures/IFixture';
 
 const baseUrl = 'https://fantasy.premierleague.com/api';
@@ -53,4 +54,8 @@ export const getManagerHistoryData = (managerId: number): Promise<IManagerHistor
 export const getManagerGameweekTeam = (managerId: number, eventId: number):
     Promise<IManagerGameweekTeam> => {
     return retrieveData.load(`${baseUrl}/entry/${managerId}/event/${eventId}/picks/`);
+};
+
+export const getDreamTeamData = (eventId: number): Promise<IDreamTeam> => {
+    return retrieveData.load(`${baseUrl}/dream-team/${eventId}/`);
 };
