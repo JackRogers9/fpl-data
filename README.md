@@ -1,0 +1,46 @@
+# FPL Data
+
+This repository contains the resolvers and schemas for a GraphQL endpoint, which acts as a single source of data for
+the FPL endpoints.
+
+---
+
+## How to open the GraphQL playground
+
+1) Clone this repository.
+```bash
+# With HTTPS:
+$ git clone https://github.com/JackRogers9/fpl-data.git
+
+# With SSH:
+$ git clone git@github.com:JackRogers9/fpl-data.git
+```
+
+2) Install dependencies
+```bash
+$ npm install
+```
+
+3) Run the server
+```bash
+$ npm run server
+```
+
+4) Navigate to [`http://localhost:9000/`](http://localhost:9000/).
+
+---
+
+| Endpoints                                                                        | Description                                                                                                                   |
+|----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| https://fantasy.premierleague.com/api/bootstrap-static/                          | Provides general information such as event data, teams, and player data.                                                      |
+| https://fantasy.premierleague.com/api/fixtures/                                  | Provides all fixtures in the current season.                                                                                  |
+| https://fantasy.premierleague.com/api/event-status/                              | Confirms when bonus points have been added.                                                                                   |
+| https://fantasy.premierleague.com/api/element-summary/{element_id}/              | Provides detailed information for a player such as remaining fixtures, performances in games, and data from previous seasons. |
+| https://fantasy.premierleague.com/api/event/{event_id}/live/                     | Provides a list of player data from that gameweek.                                                                            |
+| https://fantasy.premierleague.com/api/entry/{manager_id}/                        | Provides general information on the manager such as total points, rank, and team name.                                        |
+| https://fantasy.premierleague.com/api/entry/{manager_id}/event/{event_id}/picks/ | Provides a managers team from that gameweek and details on the team performance.                                              |
+| https://fantasy.premierleague.com/api/entry/{manager_id}/history/                | Provides manager data from previous events and previous seasons.                                                              |
+| https://fantasy.premierleague.com/api/dream-team/{event_id}/                     | Provides information on the highest scoring players from that gameweek.                                                       |
+| https://fantasy.premierleague.com/api/team/set-piece-notes/                      | Provides information on each teams set-piece takers.                                                                          |
+
+---
