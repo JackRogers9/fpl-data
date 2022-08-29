@@ -2,7 +2,7 @@
 
 This repository contains the resolvers and schemas for a GraphQL endpoint which fetches data from the FPL API.
 
-The data from 10 of the FPL endpoints (listed below) can be queried from this GraphQL endpoint.
+The data from 11 of the FPL endpoints (listed below) can be queried from this GraphQL endpoint.
 
 ---
 
