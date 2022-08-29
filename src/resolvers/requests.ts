@@ -11,7 +11,7 @@ import {
     IGameweekStats,
     IEventStatus,
     IDreamTeam,
-    IFixture,
+    IFixture, IManagerTransfer,
 } from '../interfaces/src';
 
 const baseUrl = 'https://fantasy.premierleague.com/api';
@@ -59,7 +59,7 @@ export const getManagerGameweekTeam = (managerId: number, eventId: number):
     return retrieveData.load(`${baseUrl}/entry/${managerId}/event/${eventId}/picks/`);
 };
 
-export const getManagerTransferData = (managerId: number): Promise<IManagerInformation> => {
+export const getManagerTransferData = (managerId: number): Promise<IManagerTransfer[]> => {
     return retrieveData.load(`${baseUrl}/entry/${managerId}/transfers/`);
 };
 
