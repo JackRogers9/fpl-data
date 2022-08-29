@@ -6,12 +6,13 @@ import {
     IManagerGameweekTeam,
     IManagerInformation,
     IBootstrapStatic,
+    IManagerTransfer,
     IManagerHistory,
     ISetPieceNotes,
     IGameweekStats,
     IEventStatus,
     IDreamTeam,
-    IFixture, IManagerTransfer,
+    IFixture,
 } from '../interfaces/src';
 
 const baseUrl = 'https://fantasy.premierleague.com/api';
