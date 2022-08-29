@@ -59,6 +59,10 @@ export const getManagerGameweekTeam = (managerId: number, eventId: number):
     return retrieveData.load(`${baseUrl}/entry/${managerId}/event/${eventId}/picks/`);
 };
 
+export const getManagerTransferData = (managerId: number): Promise<IManagerInformation> => {
+    return retrieveData.load(`${baseUrl}/entry/${managerId}/transfers/`);
+};
+
 export const getDreamTeamData = (eventId: number): Promise<IDreamTeam> => {
     return retrieveData.load(`${baseUrl}/dream-team/${eventId}/`);
 };

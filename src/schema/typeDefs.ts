@@ -1,5 +1,6 @@
 import { managerGameweekTeamSchemas } from './requestSchemas/managerGameweekTeam/managerGameweekTeam.schema';
 import { managerInformationSchemas } from './requestSchemas/managerInformation/managerInformation.schema';
+import { managerTransferSchema } from './requestSchemas/managerTransfer/managerTransfer.schema';
 import { bootstrapStaticSchemas } from './requestSchemas/bootstrapStatic/bootstrapStatic.schema';
 import { managerHistorySchemas } from './requestSchemas/managerHistory/managerHistory.schema';
 import { setPieceNotesSchemas } from './requestSchemas/setPieceNotes/setPieceNotes.schema';
@@ -11,6 +12,7 @@ import { querySchema } from './requestSchemas/query/query.schema';
 
 export const typeDefs = [
     querySchema,
+    managerTransferSchema,
     ...bootstrapStaticSchemas,
     ...fixturesSchemas,
     ...eventStatusSchemas,

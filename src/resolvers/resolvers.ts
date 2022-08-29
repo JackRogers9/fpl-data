@@ -8,6 +8,7 @@ import {
     getManagerData,
     getManagerGameweekTeam,
     getManagerHistoryData,
+    getManagerTransferData,
     getSetPieceData
 } from './requests';
 
@@ -42,6 +43,11 @@ export const resolvers = {
             _: unknown,
             args: {managerId: number, eventId: number}
         ) => getManagerGameweekTeam(args.managerId, args.eventId),
+
+        managerTransfers: (
+            _: unknown,
+            args: {managerId: number}
+        ) => getManagerTransferData(args.managerId),
 
         dreamTeam: (
             _: unknown,

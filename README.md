@@ -48,6 +48,7 @@ $ npm run server
 | https://fantasy.premierleague.com/api/entry/{manager_id}/                        | Provides general information on the manager such as total points, rank, and team name.                                        |
 | https://fantasy.premierleague.com/api/entry/{manager_id}/event/{event_id}/picks/ | Provides a manager's team from that gameweek and details on the team performance.                                              |
 | https://fantasy.premierleague.com/api/entry/{manager_id}/history/                | Provides manager data from previous events and previous seasons.                                                              |
+| https://fantasy.premierleague.com/api/entry/{manager_id}/transfers/              | Provides information on the transfers a manager has made in the current season.                                               |
 | https://fantasy.premierleague.com/api/dream-team/{event_id}/                     | Provides information on the highest scoring players from that gameweek.                                                       |
 | https://fantasy.premierleague.com/api/team/set-piece-notes/                      | Provides information on each team's set-piece takers.                                                                          |
 
