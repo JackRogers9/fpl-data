@@ -13,7 +13,7 @@ import {
     IEventStatus,
     IDreamTeam,
     IFixture,
-} from '../interfaces/src';
+} from '../../interfaces/src';
 
 const baseUrl = 'https://fantasy.premierleague.com/api';
 
