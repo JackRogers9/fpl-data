@@ -4,6 +4,9 @@ This repository contains the resolvers and schemas for a GraphQL endpoint which 
 
 The data from 11 of the FPL endpoints (listed below) can be queried from this GraphQL endpoint.
 
+It also contains an Express server which is used in my [FPL Planning Tool](https://github.com/JackRogers9/fpl-planning-tool).
+This server is used to login to the user's FPL account and make calls which require the user to be authenticated.
+
 ---
 
 ## How to open the GraphQL playground
@@ -29,9 +32,9 @@ $ git submodule update
 $ npm install
 ```
 
-4) Run the server.
+4) Run the GraphQL server.
 ```bash
-$ npm run server
+$ npm run gql-server
 ```
 
 5) Navigate to [`http://localhost:9000/`](http://localhost:9000/).
