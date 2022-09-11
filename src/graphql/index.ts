@@ -14,5 +14,5 @@ const server = new ApolloServer({
 });
 
 server.listen(9000).then(({ url }) => {
-    console.log(`Server is running at ${url}`);
+    console.log(`GraphQL server is running at ${url}`);
 });
