@@ -27,7 +27,7 @@ const retrieveData = new DataLoader((keys: readonly string[]) => {
     );
 });
 
-export const getBootstrapStaticData = (): Promise<IBootstrapStatic> => {
+export const getGeneralData = (): Promise<IBootstrapStatic> => {
     return retrieveData.load(`${baseUrl}/bootstrap-static/`);
 };
 

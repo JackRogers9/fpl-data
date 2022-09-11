@@ -1,7 +1,15 @@
 import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
 import { ApolloServer } from 'apollo-server';
-import { resolvers } from './resolvers/resolvers';
+import { endpointResolvers } from './resolvers/endpointResolvers';
+import { customResolvers } from './resolvers/customResolvers';
 import { typeDefs } from './schema/typeDefs';
+
+const resolvers = {
+    Query: {
+        ...endpointResolvers,
+        ...customResolvers
+    }
+};
 
 const server = new ApolloServer({
     typeDefs,

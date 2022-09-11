@@ -7,6 +7,7 @@ export const querySchema = gql`
         eventStatus: EventStatus
         setPieceNotes: SetPieceNotes
         gameweekData(eventId: Int): GameweekData
+        gameweekSummary(managerId: Int): GameweekSummary
         playerGameweekData(eventId: Int, playerId: Int): PlayerGameweekData
         managerInformation(managerId: Int): ManagerInformation
         managerHistory(managerId: Int): ManagerHistory
