@@ -3,6 +3,7 @@ import { managerInformationSchemas } from './requestSchemas/managerInformation/m
 import { bootstrapStaticSchemas } from './requestSchemas/bootstrapStatic/bootstrapStatic.schema';
 import { gameweekSummarySchema } from './requestSchemas/gameweekSummary/gameweekSummary.schema';
 import { managerTransferSchema } from './requestSchemas/managerTransfer/managerTransfer.schema';
+import { elementSummarySchemas } from './requestSchemas/elementSummary/elementSummary.schema';
 import { managerHistorySchemas } from './requestSchemas/managerHistory/managerHistory.schema';
 import { setPieceNotesSchemas } from './requestSchemas/setPieceNotes/setPieceNotes.schema';
 import { gameweekDataSchemas } from './requestSchemas/gameweekStats/gameweekStats.schema';
@@ -20,6 +21,7 @@ export const typeDefs = [
     ...eventStatusSchemas,
     ...setPieceNotesSchemas,
     ...gameweekDataSchemas,
+    ...elementSummarySchemas,
     ...managerInformationSchemas,
     ...managerHistorySchemas,
     ...managerGameweekTeamSchemas,

@@ -8,7 +8,8 @@ import {
     getManagerGameweekTeam,
     getManagerHistoryData,
     getManagerTransferData,
-    getSetPieceData
+    getSetPieceData,
+    getElementSummary
 } from './requests';
 
 export const endpointResolvers = {
@@ -21,6 +22,11 @@ export const endpointResolvers = {
         _: unknown,
         args: { eventId: number }
     ) => getGameweekData(args.eventId),
+
+    elementSummary: (
+        _: unknown,
+        args: { elementId: number }
+    ) => getElementSummary(args.elementId),
 
     managerInformation: (
         _: unknown,
