@@ -9,6 +9,7 @@ import { setPieceNotesSchemas } from './requestSchemas/setPieceNotes/setPieceNot
 import { gameweekDataSchemas } from './requestSchemas/gameweekStats/gameweekStats.schema';
 import { eventStatusSchemas } from './requestSchemas/eventStatus/eventStatus.schema';
 import { dreamTeamSchemas } from './requestSchemas/dreamTeam/dreamTeam.schema';
+import { teamStatsSchemas } from './requestSchemas/teamStats/teamStats.schema';
 import { fixturesSchemas } from './requestSchemas/fixtures/fixture.schema';
 import { querySchema } from './requestSchemas/query/query.schema';
 
@@ -21,6 +22,7 @@ export const typeDefs = [
     ...eventStatusSchemas,
     ...setPieceNotesSchemas,
     ...gameweekDataSchemas,
+    ...teamStatsSchemas,
     ...elementSummarySchemas,
     ...managerInformationSchemas,
     ...managerHistorySchemas,
