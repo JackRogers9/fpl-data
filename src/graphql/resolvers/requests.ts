@@ -14,6 +14,6 @@ const retrieveData = new DataLoader((keys: readonly string[]) => {
     );
 });
 
-export const loadData = (relativeUrl: string): Promise<any> => {
+export const loadData = (relativeUrl: string): Promise<unknown> => {
     return retrieveData.load(`${baseUrl}${relativeUrl}`);
 };
