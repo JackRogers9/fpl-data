@@ -1,9 +1,9 @@
-import { IPlayerGameweekData } from '../../interfaces/src';
-import { getGameweekData } from '../resolvers/requests';
+import { endpointResolvers } from '../resolvers/endpointResolvers';
+import { IElementHistory } from '../../interfaces/src';
 
-export const getPlayerGameweekData = async (eventId: number, playerId: number):
-    Promise<IPlayerGameweekData | undefined> => {
-    const gameweekStats = await getGameweekData(eventId);
+export const getPlayerGameweekData = async (eventId: number, elementId: number):
+    Promise<IElementHistory | undefined> => {
+    const gameweekStats = await endpointResolvers.elementSummary(null, { elementId });
 
-    return gameweekStats.elements.find((element: IPlayerGameweekData) => element.id === playerId);
+    return gameweekStats.history.find((gameweek: IElementHistory) => gameweek.round === eventId);
 };

@@ -4,8 +4,8 @@ import { getPlayerGameweekData } from '../helpers/getPlayerGameweekData';
 export const customResolvers = {
     playerGameweekData: (
         _: unknown,
-        args: { eventId: number, playerId: number }
-    ) => getPlayerGameweekData(args.eventId, args.playerId),
+        args: { eventId: number, elementId: number }
+    ) => getPlayerGameweekData(args.eventId, args.elementId),
 
     gameweekSummary: (
         _: unknown,

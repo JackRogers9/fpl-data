@@ -1,55 +1,59 @@
+import { loadData } from './requests';
 import {
-    getGeneralData,
-    getDreamTeamData,
-    getEventStatusData,
-    getFixturesData,
-    getGameweekData,
-    getManagerData,
-    getManagerGameweekTeam,
-    getManagerHistoryData,
-    getManagerTransferData,
-    getSetPieceData,
-    getElementSummary
-} from './requests';
+    IBootstrapStatic,
+    IDreamTeam,
+    IElementSummary,
+    IEventStatus,
+    IFixture,
+    IGameweekStats,
+    IManagerGameweekTeam,
+    IManagerHistory,
+    IManagerInformation,
+    IManagerTransfer,
+    ISetPieceNotes
+} from '../../interfaces/src';
 
 export const endpointResolvers = {
-    general: () => getGeneralData(),
-    fixtures: () => getFixturesData(),
-    eventStatus: () => getEventStatusData(),
-    setPieceNotes: () => getSetPieceData(),
+    general: (): Promise<IBootstrapStatic> => loadData(`/bootstrap-static/`),
+
+    fixtures: (): Promise<IFixture[]> => loadData(`/fixtures/`),
+
+    eventStatus: (): Promise<IEventStatus> => loadData(`/event-status/`),
+
+    setPieceNotes: (): Promise<ISetPieceNotes> => loadData(`/team/set-piece-notes/`),
 
     gameweekData: (
         _: unknown,
         args: { eventId: number }
-    ) => getGameweekData(args.eventId),
+    ): Promise<IGameweekStats> => loadData(`/event/${args.eventId}/live/`),
 
     elementSummary: (
         _: unknown,
         args: { elementId: number }
-    ) => getElementSummary(args.elementId),
+    ): Promise<IElementSummary> => loadData(`/element-summary/${args.elementId}/`),
 
     managerInformation: (
         _: unknown,
         args: { managerId: number }
-    ) => getManagerData(args.managerId),
+    ): Promise<IManagerInformation> => loadData(`/entry/${args.managerId}/`),
 
     managerHistory: (
         _: unknown,
         args: { managerId: number }
-    ) => getManagerHistoryData(args.managerId),
+    ): Promise<IManagerHistory> => loadData(`/entry/${args.managerId}/history/`),
 
     managerGameweekTeam: (
         _: unknown,
         args: { managerId: number, eventId: number }
-    ) => getManagerGameweekTeam(args.managerId, args.eventId),
+    ): Promise<IManagerGameweekTeam> => loadData(`/entry/${args.managerId}/event/${args.eventId}/picks/`),
 
     managerTransfers: (
         _: unknown,
         args: { managerId: number }
-    ) => getManagerTransferData(args.managerId),
+    ): Promise<IManagerTransfer[]> => loadData(`/entry/${args.managerId}/transfers/`),
 
     dreamTeam: (
         _: unknown,
         args: { eventId: number }
-    ) => getDreamTeamData(args.eventId)
+    ): Promise<IDreamTeam> => loadData(`/dream-team/${args.eventId}/`)
 };

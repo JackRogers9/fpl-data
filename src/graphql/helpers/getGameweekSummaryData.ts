@@ -1,4 +1,4 @@
-import { getGeneralData, getManagerData } from '../resolvers/requests';
+import { endpointResolvers } from '../resolvers/endpointResolvers';
 import { IEvent, IGameweekSummary } from '../../interfaces/src';
 
 export const getGameweekSummaryData = async (managerId: number): Promise<IGameweekSummary> => {
@@ -6,9 +6,9 @@ export const getGameweekSummaryData = async (managerId: number): Promise<IGamewe
         summaryOverallRank,
         summaryEventPoints,
         summaryEventRank
-    } = await getManagerData(managerId);
+    } = await endpointResolvers.managerInformation(null, { managerId });
 
-    const { events } = await getGeneralData();
+    const { events } = await endpointResolvers.general();
 
     const {
         id,
