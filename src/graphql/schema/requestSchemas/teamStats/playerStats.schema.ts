@@ -12,5 +12,8 @@ export const playerStatsSchema = gql`
         oppositionName: String
         oppositionShortName: String
         positionShortName: String
+        position: Int
+        isCaptain: Boolean
+        isViceCaptain: Boolean
     }
 `;
