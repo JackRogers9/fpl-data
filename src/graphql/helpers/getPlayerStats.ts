@@ -14,6 +14,7 @@ export const getPlayerStats = async (eventId: number, pick: IGameweekPick)
 
     const data = {
         id: playerInformation.id,
+        webName: playerInformation.webName,
         firstName: playerInformation.firstName,
         secondName: playerInformation.secondName,
         teamName: clubInformation.name,

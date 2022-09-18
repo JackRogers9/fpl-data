@@ -3,6 +3,7 @@ import { gql } from 'apollo-server';
 export const playerStatsSchema = gql`
     type PlayerStats {
         id: Int
+        webName: String
         firstName: String
         secondName: String
         wasHome: Boolean
