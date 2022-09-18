@@ -8,42 +8,41 @@ export const getPlayerStats = async (eventId: number, pick: IGameweekPick)
     : Promise<IPlayerStats> => {
     const { elements, elementTypes, teams } = await endpointResolvers.general();
 
-    const {
-        id,
-        firstName,
-        secondName,
-        team,
-        elementType
-    } = getPlayerInformation(elements, pick.element)!;
+    const playerInformation = getPlayerInformation(elements, pick.element)!;
+    const clubInformation = getClubInformation(teams, playerInformation.team)!;
+    const position = elementTypes.find((type) => type.id === playerInformation.elementType)!;
 
-    const {
-        pluralNameShort: positionShortName
-    } = elementTypes.find((type) => type.id === elementType)!;
-
-    const {
-        opponentTeam, wasHome, totalPoints
-    } = (await getPlayerGameweekData(eventId, pick.element))!;
-
-    const { name: teamName, shortName: teamShortName } = getClubInformation(teams, team)!;
-
-    const {
-        name: oppositionName,
-        shortName: oppositionShortName
-    } = getClubInformation(teams, opponentTeam)!;
-
-    return {
-        id,
-        firstName,
-        secondName,
-        wasHome,
-        teamName,
-        teamShortName,
-        oppositionName,
-        oppositionShortName,
-        positionShortName,
+    const data = {
+        id: playerInformation.id,
+        firstName: playerInformation.firstName,
+        secondName: playerInformation.secondName,
+        teamName: clubInformation.name,
+        teamShortName: clubInformation.shortName,
+        positionShortName: position.pluralNameShort,
         position: pick.position,
         isCaptain: pick.isCaptain,
         isViceCaptain: pick.isViceCaptain,
-        totalPoints: totalPoints * pick.multiplier,
+    };
+
+    const gameweekData = await getPlayerGameweekData(eventId, pick.element);
+
+    if (gameweekData === undefined) {
+        return {
+            ...data,
+            wasHome: false,
+            totalPoints: 0,
+            oppositionName: '',
+            oppositionShortName: '',
+        };
+    }
+
+    const oppositionInformation = getClubInformation(teams, gameweekData.opponentTeam)!;
+
+    return {
+        ...data,
+        wasHome: gameweekData.wasHome,
+        oppositionName: oppositionInformation.name,
+        oppositionShortName: oppositionInformation.shortName,
+        totalPoints: gameweekData.totalPoints * pick.multiplier,
     };
 };
