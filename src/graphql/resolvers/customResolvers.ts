@@ -1,4 +1,4 @@
-import { getGameweekSummaryData } from '../helpers/getGameweekSummaryData';
+import { getLiveGameweekSummaryData } from '../helpers/getLiveGameweekSummaryData';
 import { getPlayerGameweekData } from '../helpers/getPlayerGameweekData';
 import { getTeamStats } from '../helpers/getTeamStats';
 
@@ -8,10 +8,10 @@ export const customResolvers = {
         args: { eventId: number, elementId: number }
     ) => getPlayerGameweekData(args.eventId, args.elementId),
 
-    gameweekSummary: (
+    liveGameweekSummary: (
         _: unknown,
         args: { managerId: number }
-    ) => getGameweekSummaryData(args.managerId),
+    ) => getLiveGameweekSummaryData(args.managerId),
 
     teamStats: (
         _: unknown,

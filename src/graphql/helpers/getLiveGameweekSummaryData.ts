@@ -1,7 +1,7 @@
 import { endpointResolvers } from '../resolvers/endpointResolvers';
 import { IEvent, IGameweekSummary } from '../../interfaces/src';
 
-export const getGameweekSummaryData = async (managerId: number): Promise<IGameweekSummary> => {
+export const getLiveGameweekSummaryData = async (managerId: number): Promise<IGameweekSummary> => {
     const {
         summaryOverallRank,
         summaryEventPoints,
